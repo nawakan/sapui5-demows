@@ -1,0 +1,21 @@
+<mvc:View controllerName="demows07.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Input id="name" placeholder="name"/>
+            <Input id="gender" placeholder="gender"/>
+            <Input id="email" placeholder="email"/>
+            <Input id="status" placeholder="status"/>
+            <Button press="onSave" text="Save"/>
+            <List id="list" items="{rest_api>/}">
+                <items>
+                    <StandardListItem
+                        title="{rest_api>id}"
+                        description="{rest_api>name}"
+                    />
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,14 @@
+<mvc:View controllerName="demows02.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Label text="manifestJsonModel :" design="Bold"/>
+            <Input value="{manifestJsonModel>/Data/Value}" submit="onSubmit"/>
+            <Label text="componentJsonModel :" design="Bold"/>
+            <Input value="{componentJsonModel>/Data/Value}"/>
+            <Label text="viewJsonModel :" design="Bold"/>
+            <Input value="{viewJsonModel>/Data/Value}"/>
+        </content>
+    </Page>
+</mvc:View>

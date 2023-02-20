@@ -1,0 +1,23 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Table id="table"
+    delete="onDelete" >
+        <columns>
+            <Column>
+                <Text text="ProductID" />
+            </Column>
+            <Column>
+                <Text text="UnitPrice" />
+            </Column>
+            <Column>
+                <Text text="Quantity" />
+            </Column>
+            <Column>
+                <Text text="Discount" />
+            </Column>
+        </columns>
+    </Table>
+</core:FragmentDefinition>

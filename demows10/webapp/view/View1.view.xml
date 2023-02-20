@@ -1,0 +1,15 @@
+<mvc:View controllerName="demows10.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:customcontrol="demows10.customcontrol">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <customcontrol:ProductRating id="productrating"/>
+            <Button text="Reset" press="onResetRating" />
+            <VBox>
+                <customcontrol:SignaturePad id="signaturepad"/>
+                <Button text="Clear" press="onClear" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,53 @@
+<mvc:View controllerName="demows03.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <List id="companyList" items="{path: '/companies', templateShareable:false}"
+            mode="SingleSelectMaster"
+            selectionChange="onSelectionChange">
+                <items>
+                    <StandardListItem
+                        title="{name}"
+                        description="{city}"
+                    />
+                </items>
+            </List>
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormDisplay354"
+                    editable="false"
+                    layout="ResponsiveGridLayout"
+                    title="Address"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false" >
+                    <f:content>
+                        <Label text="Name" />
+                        <Text text="{name}" />
+                        <Label text="City." />
+                        <Text text="{city}" />
+                        <Label text="State" />
+                        <Text text="{state}" />
+                        <Label text="Country" />
+                        <Text text="{county}" />
+                        <Label text="Revenue" />
+                        <Text text="{revenue}" />
+                    </f:content>
+                </f:SimpleForm>
+            </VBox> 
+        </content>
+    </Page>
+</mvc:View>

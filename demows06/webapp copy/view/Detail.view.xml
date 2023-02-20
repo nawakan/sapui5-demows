@@ -1,0 +1,89 @@
+<mvc:View controllerName="demows06.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<customHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button icon="sap-icon://edit" type="Transparent" press="onEdit" ariaLabelledBy="editButtonLabel"/>
+			</Toolbar>
+		</customHeader>
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm id="SimpleFormDisplay354"
+                    editable="false"
+                    layout="ResponsiveGridLayout"
+                    title="Address"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false" >
+                    <f:content>
+                        <Label text="OrderID" />
+                        <Text text="{OrderID}" />
+                        <Label text="CustomerID." />
+                        <Text text="{CustomerID}" />
+                        <Label text="EmployeeID" />
+                        <Text text="{EmployeeID}" />
+                        <Label text="OrderDate" />
+                        <Text text="{OrderDate}" />
+                        <Label text="RequiredDate" />
+                        <Text text="{RequiredDate}" />
+                        <Label text="ShippedDate" />
+                        <Text text="{ShippedDate}" />
+                        <Label text="ShipVia" />
+                        <Text text="{ShipVia}" />
+                        <Label text="Freight" />
+                        <Text text="{Freight}" />
+                        <Label text="ShipName" />
+                        <Text text="{ShipName}" />
+                        <Label text="ShipAddress" />
+                        <Text text="{ShipAddress} {ShipCity} {ShipPostalCode} {ShipCountry}" />
+                    </f:content>
+                </f:SimpleForm>
+            </VBox> 
+            <Table id="table"
+                >
+                <columns>
+                    <Column>
+                        <Text text="ProductID" />
+                    </Column>
+                    <Column>
+                        <Text text="UnitPrice" />
+                    </Column>
+                    <Column>
+                        <Text text="Quantity" />
+                    </Column>
+                    <Column>
+                        <Text text="Discount" />
+                    </Column>
+                </columns>
+                <!-- <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{ItemNumber}" />
+                            <ObjectIdentifier title="{ShortText}" text="{MaterialNumber}"/>
+                            <Text text="{PurchaseOrderQuantity} {PurchaseOrderUnit}" />
+                            <Text text="{NetPrice}" />
+                            <Text text="{NetOrderValue}" />
+                        </cells>
+                    </ColumnListItem>
+                </items> -->
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,28 @@
+{
+	"Data":{
+		"Value" : "Data from model in manifest.json"
+	},
+	"Customer":[
+		{
+			"Name" : "A1",
+			"LastName" : "AAA",
+			"Address" : "111",
+			"Money" : "10",
+			"Currency" : "THB"
+		},
+		{
+			"Name" : "B1",
+			"LastName" : "BBB",
+			"Address" : "222",
+			"Money" : "20",
+			"Currency" : "USD"
+		},
+		{
+			"Name" : "C1",
+			"LastName" : "CCC",
+			"Address" : "333",
+			"Money" : "30",
+			"Currency" : "EUR"
+		}
+	]
+}

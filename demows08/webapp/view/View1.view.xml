@@ -1,0 +1,27 @@
+<mvc:View controllerName="demows08.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <HBox>
+                <Input id="value01" placeholder="Value 01"/>
+                <Input id="value02" placeholder="Value 02"/>
+                <Button text="Add" press="onAdd"/>
+                <Input id="result" placeholder="Result" editable="false"
+                value="{addResult>/soap:Body/AddResponse/AddResult}"/>
+            </HBox>
+            <HBox>
+                <Input id="findname" placeholder="Find Name.."/>
+                <Button text="Find" press="onFind"/>
+            </HBox>
+            <List id="list" 
+            items="{listName>/SOAP-ENV:Body/GetListByNameResponse/GetListByNameResult/PersonIdentification}">
+                <items>
+                    <StandardListItem
+                        title="{listName>ID}"
+                        description="{listName>Name}" />
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
