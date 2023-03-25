@@ -1,0 +1,12 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:demows10="demows10.customcontrol">
+    <Dialog title="Sign Pad">
+        <demows10:SignaturePad id="signaturepad" />
+        <buttons>
+            <Button text="Clear" press="onClearSignPad"/>
+            <Button text="Close" press="onCloseSignPad" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

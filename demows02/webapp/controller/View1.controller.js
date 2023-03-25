@@ -13,9 +13,6 @@ sap.ui.define([
                 var oJson = new sap.ui.model.json.JSONModel("../data/datatest03.json");
                 this.getView().setModel(oJson, "viewJsonModel");
 
-            },
-            onSubmit: function(){
-                debugger;
             }
         });
     });

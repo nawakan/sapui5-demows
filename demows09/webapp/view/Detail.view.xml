@@ -74,18 +74,13 @@
                         <Text text="Discount" />
                     </Column>
                 </columns>
-                <!-- <items>
-                    <ColumnListItem>
-                        <cells>
-                            <Text text="{ItemNumber}" />
-                            <ObjectIdentifier title="{ShortText}" text="{MaterialNumber}"/>
-                            <Text text="{PurchaseOrderQuantity} {PurchaseOrderUnit}" />
-                            <Text text="{NetPrice}" />
-                            <Text text="{NetOrderValue}" />
-                        </cells>
-                    </ColumnListItem>
-                </items> -->
             </Table>
         </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button text="Sign" press="onSign" />
+            </OverflowToolbar>
+        </footer>
     </Page>
 </mvc:View>

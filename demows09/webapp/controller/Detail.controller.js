@@ -56,6 +56,39 @@ sap.ui.define([
                 var oForm = this.byId("SimpleFormDisplay354"),
                 vOrderId = oForm.getBindingContext().getProperty("OrderID");
                 this.getRouter().navTo("EditRO", { orderid: vOrderId });
+            },
+
+            onSign: function(){
+
+                if (!this._SignPadDialog) {
+
+                    var oSignPadFrag = this.loadFragment({
+                        name: "demows09.fragment.SignPadDialog" 
+                    });
+
+                    oSignPadFrag.then(function(oDialog) { // return first control
+                        this._SignPadDialog = oDialog;
+                        this._SignPadDialog.open();
+                    }.bind(this));
+
+                } 
+                else this._SignPadDialog.open();
+
+            },
+
+            onSaveSignPad: function(){
+                var link = document.createElement('a');
+                link.href = sap.ui.core.Fragment.byId("fr1", "signature_pad").getImageURL();
+                link.download = 'sign.jpeg';
+                link.click(); 	
+            },
+    
+            onClearSignPad: function(oEvent) {
+                this.byId("signaturepad").clearSignature();
+            },
+
+            onCloseSignPad: function(){
+                this._SignPadDialog.close();
             }
 
         });

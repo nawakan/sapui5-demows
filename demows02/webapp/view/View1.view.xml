@@ -4,7 +4,7 @@
     <Page id="page" title="{i18n>title}">
         <content>
             <Label text="manifestJsonModel :" design="Bold"/>
-            <Input value="{manifestJsonModel>/Data/Value}" submit="onSubmit"/>
+            <Input value="{manifestJsonModel>/Data/Value}"/>
             <Label text="componentJsonModel :" design="Bold"/>
             <Input value="{componentJsonModel>/Data/Value}"/>
             <Label text="viewJsonModel :" design="Bold"/>

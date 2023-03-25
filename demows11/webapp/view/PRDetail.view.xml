@@ -1,0 +1,10 @@
+<mvc:View controllerName="demows11.controller.PRDetail"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="PR Detail"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+        <content>
+        </content>
+    </Page>
+</mvc:View>

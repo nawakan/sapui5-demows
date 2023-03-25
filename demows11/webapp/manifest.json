@@ -1,0 +1,178 @@
+{
+  "_version": "1.45.0",
+  "sap.app": {
+    "id": "demows11",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.8.0",
+      "toolsId": "44e45acc-a569-4646-8fb4-3a634db9c397"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.109.3",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "demows11.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "demows11.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "LoginRO",
+          "pattern": "",
+          "target": [
+            "LoginTG"
+          ]
+        },
+        {
+          "name": "DashboardRO",
+          "pattern": "dashboard",
+          "target": [
+            "DashboardTG"
+          ]
+        },
+        {
+          "name": "PRListRO",
+          "pattern": "prlist",
+          "target": [
+            "PRListTG",
+            "PRDetailTG"
+          ]
+        },
+        {
+          "name": "PRDetailRO",
+          "pattern": "prdetail/{prnumber}",
+          "target": [
+            "PRListTG",
+            "PRDetailTG"
+          ]
+        }
+      ],
+      "targets": {
+        "LoginTG": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Login",
+          "viewName": "Login"
+        },
+        "DashboardTG": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Dashboard",
+          "viewName": "Dashboard"
+        },
+        "PRListTG": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "PRList",
+          "viewName": "PRList",
+          "controlAggregation": "masterPages",
+          "controlId": "splitapp",
+          "parent":"SplitAppTG"
+        },
+        "PRDetailTG": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "PRDetail",
+          "viewName": "PRDetail",
+          "controlAggregation": "detailPages",
+          "controlId": "splitapp",
+          "parent":"SplitAppTG"
+        },
+        "SplitAppTG": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "SplitApp",
+            "viewName": "SplitApp"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "demows11.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

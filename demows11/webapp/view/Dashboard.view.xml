@@ -1,0 +1,29 @@
+<mvc:View controllerName="demows11.controller.Dashboard"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+        <content>
+
+            <GenericTile header="Approve PR"
+                            press="onPressPRTile"
+                            class="sapUiTinyMarginEnd">
+                <TileContent footer="{dashboardModel>/approvePr/waitForApproveUrgentAmount}">
+                    <NumericContent withMargin="false"
+                                    value="{dashboardModel>/approvePr/waitForApproveAmount}"
+                                    valueColor="Critical"/>
+			        <!-- <ImageContent src="sap-icon://home-share" /> -->
+                </TileContent>
+            </GenericTile>
+
+            <!-- <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+            header="Approve PR" press="onPressPRTile" frameType = "OneByHalf">
+                <TileContent >
+                    <NumericContent value="12" withMargin="false" />
+                </TileContent>
+            </GenericTile> -->
+
+        </content>
+    </Page>
+</mvc:View>

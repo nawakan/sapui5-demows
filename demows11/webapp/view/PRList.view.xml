@@ -1,0 +1,20 @@
+<mvc:View controllerName="demows11.controller.PRList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="PR List"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+        <content>
+            <List id="prList" items="{path: 'prListModel>/purchasingRequests', templateShareable:false}"
+            mode="SingleSelectMaster"
+            selectionChange="onSelectionChange">
+                <items>
+                    <StandardListItem
+                        title="{prListModel>prHeaderId}"
+                        description="{prListModel>statusDescEn}"
+                    />
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,9 @@
+{
+    "GetToken":{
+        "User":"vrm-client",
+        "Password":"P@ssw0rds",
+        "grant_type":"password",
+        "client_id":"vrm-client"
+    },
+    "AccessToken":""
+}
